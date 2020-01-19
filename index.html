@@ -11,74 +11,103 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic+Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Thasadith&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="script.js" type="text/javascript"></script>
   <head>
   <body>
-    <div id="container">
-      <div id="navigationMenu">
-        <img src="images/logo2.png" alt="logo">
-        <ul>
-          <li class="navBtn"> <span>home</span> </li>
-          <li class="navBtn"> <a href="#scrollPsAbout">about me</a> </li>
-          <li class="navBtn"> <a href="#portfolio-title">portfolio</a> </li>
-          <li class="navBtn"> <a href="">contact me</a> </li>
-        <ul>
-      </div>
-      <div id="header">
-          <div id="scrollPsAbout"></div>
-          <div id="aboutmeBox">
-            <h2>About Me</h2>
-            <p>Look again at that dot. That's here. That's home. That's us.
-              On it everyone you love, everyone you know, everyone you ever heard of,
-              every human being who ever was, lived out their lives.
-              The aggregate of our joy and suffering,
-              thousands of confident religions, ideologies, and economic doctrines,
-              every hunter and forager, every hero and coward, every creator and destroyer of civilization,
-              every king and peasant, every young couple in love, every mother and father,
-              hopeful child, inventor and explorer, every teacher of morals,
-              every corrupt politician, every "superstar," every "supreme leader,"
-              every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam.</p>
+      <div id="container">
+        <div id="navigationMenu">
+          <img src="images/logo2.png" alt="logo">
+          <div id="menuLinks">
+            <ul>
+              <li class="navBtn"> <span>home</span> </li>
+              <li class="navBtn"> <a href="#scrollPsAbout">about me</a> </li>
+              <li class="navBtn"> <a href="#portfolio-title">portfolio</a> </li>
+              <li class="navBtn"> <a href="#contactTitle">contact me</a> </li>
+            <ul>
           </div>
-          <p id="picAdrian">
-            <img src="images/Adrian0.png" alt="Adrian" id="a1">
-            <img src="images/Adrian.png" alt="Adrian" id="a2">
+        </div>
+        <div id="header">
+            <a href="#scrollPsAbout"><div id="arrowLink_"></div></a>
+            <div id="scrollPsAbout"></div>
+            <div id="aboutmeBox">
+              <h2>About Me</h2>
+              <p>Look again at that dot. That's here. That's home. That's us.
+                On it everyone you love, everyone you know, everyone you ever heard of,
+                every human being who ever was, lived out their lives.
+                The aggregate of our joy and suffering,
+                thousands of confident religions, ideologies, and economic doctrines,
+                every hunter and forager, every hero and coward, every creator and destroyer of civilization,
+                every king and peasant, every young couple in love, every mother and father,
+                hopeful child, inventor and explorer, every teacher of morals,
+                every corrupt politician, every "superstar," every "supreme leader,"
+                every saint and sinner in the history of our species lived there--on a mote of dust suspended in a sunbeam.</p>
+            </div>
+            <p id="picAdrian">
+              <img src="images/Adrian0-min.png" alt="Adrian" id="a1">
+              <img src="images/Adrian-min.png" alt="Adrian" id="a2">
+            </p>
+            <p>I am<br><span>Adrian Fagarasanu<span></p>
+            <img src="images/aboutMeUnderlay.png" alt="underlay" class="underlay">
+        </div>
+        <div id="icons">
+          <a class="icon" href="images/logo.png" download><i class="fab fa-file-text" aria-hidden="true"></i></a>
+          <a class="icon" href="https://github.com/AdrianGeorgeFagarasanu?tab=projects"><i class="fab fa-github-square" aria-hidden="true"></i></a>
+          <a class="icon" href="https://www.linkedin.com/in/adrian-f-2a3856127/"><i class="fab fa-linkedin-square" aria-hidden="true"></i></a>
+        </div>
+        <div id="bottom-content">
+          <a href="#portfolio-title"><div id="arrowLink"></div></a>
+          <img src="images/fog2-min.jpg" alt=forest>
+          <p id="portfolio-title">
+            Portfolio Preview</br>
+            <a href="portfolio.html">MORE</a>
           </p>
-          <p>I am<br><span>Adrian Fagarasanu<span></p>
-          <img src="images/aboutMeUnderlay.png" alt="underlay" class="underlay">
-      </div>
-      <div id="icons">
-        <a class="icon" href="images/logo.png" download><i class="fab fa-file-text" aria-hidden="true"></i></a>
-        <a class="icon" href="https://github.com/AdrianGeorgeFagarasanu?tab=projects"><i class="fab fa-github-square" aria-hidden="true"></i></a>
-        <a class="icon" href="https://www.linkedin.com/in/adrian-f-2a3856127/"><i class="fab fa-linkedin-square" aria-hidden="true"></i></a>
-      </div>
-      <div id="bottom-content">
-        <img src="images/fog2.jpg" alt=forest>
-        <p id="portfolio-title">
-          Portfolio Preview</br>
-          <a href="portfolio.html">MORE</a>
-        </p>
-        <div id="portfolio-grid">
-          <a href=""><div class="portfolio-item one">Whisper of Seclusion</div></a>
-          <a href=""><div class="portfolio-item two">Indiana Jones: Java Adventure</div></a>
-          <a href=""><div class="portfolio-item three">Earth Model</div></a>
-          <a href=""><div class="portfolio-item four">Arduino with PIR Motion</div></a>
-          <a href=""><div class="portfolio-item five">Infin8lite Web Prototype</div></a>
-          <a href=""><div class="portfolio-item six">six</div></a>
-          <a href=""><div class="portfolio-item wide">seven</div></a>
+          <div id="portfolio-grid">
+            <a href=""><div class="portfolio-item one">Whisper of Seclusion<p>- Unreal Engine 4 with C++</p></div></a>
+            <a href=""><div class="portfolio-item two">Indiana Jones: Java Adventure<p>- Java with JFrame</p></div></a>
+            <a href=""><div class="portfolio-item three">Earth Modeling and Animation<p>- Blender 3D</p></div></a>
+            <a href=""><div class="portfolio-item four">Seminar and Lab Experience<p>- Arduino Hardware and Software</p></div></a>
+            <a href=""><div class="portfolio-item five">Infin8lite Web Prototype<p>- HTML, CSS, Javascript with JQuery</div></a>
+            <a href=""><div class="portfolio-item six">six</div></a>
+            <a href=""><div class="portfolio-item wide">seven</div></a>
+          </div>
+          <a href="#contactTitle"><div id="arrowLink2"></div></a>
+        <div id="flyInBox" class="loading">
+          <div class="welcome"> <h1 class="h">W</h1> </div>
+          <div class="welcome"> <h1 class="h">E</h1> </div>
+          <div class="welcome"> <h1 class="h">L</h1> </div>
+          <div class="welcome"> <h1 class="h">C</h1> </div>
+          <div class="welcome"> <h1 class="h">O</h1> </div>
+          <div class="welcome"> <h1 class="h">M</h1> </div>
+          <div class="welcome"> <h1 class="h">E</h1> </div>
         </div>
       </div>
-      <div id="flyInBox">
-        <div class="welcome"> <h1>W</h1> </div>
-        <div class="welcome"> <h1>E</h1> </div>
-        <div class="welcome"> <h1>L</h1> </div>
-        <div class="welcome"> <h1>C</h1> </div>
-        <div class="welcome"> <h1>O</h1> </div>
-        <div class="welcome"> <h1>M</h1> </div>
-        <div class="welcome"> <h1>E</h1> </div>
-      </div>
+      <div id="Contact">
+        <h1 id="contactTitle">CONTACT ME</h1>
+        <div id="Contact-Form">
+          <form id="contact-form" action="contact.php" method="post">
+            <p>
+              <input id="name" type="text" name="name" placeholder="Name*">
+            </p>
+            <p>
+              <input id="email" type="text" name="email" placeholder="Email*">
+            </p>
+            <p>
+              <input id="phone" type="text" name="phoneNumber" placeholder="Phone">
+            </p>
+            <p>
+              <textarea id="message" type="text" name="message" placeholder="Message"></textarea>
+            </p>
+            <p>
+              <button id="sendBtn" type="submit" name="submit">SEND</button>
+            </p>
+          </form>
+        </div>
+        <p id="infoFooter">Website designed and coded using HTML, CSS, Javascript with JQuery, and PHP.</p>
     </div>
   <body>
 </html>
