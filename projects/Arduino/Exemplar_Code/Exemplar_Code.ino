@@ -86,7 +86,7 @@ void setup(){
       Serial.print(".");
       delay(1000);
       }
-    Serial.println(" done");
+    Serial.println(" DONE.");
     Serial.println("SENSOR ACTIVE");
     delay(50);
   }
