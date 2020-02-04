@@ -1,5 +1,78 @@
+h1, .row h3, .row p, .row li {
+  color: rgba(255,255,255,0.8);
+}
+h1 {
+padding: 4vw;
+font-family: "Nothing You Could Do", sans-serif;
+}
+.row h3, .row p, .row li {
+  font-family: "Lato", serif;
+}
+small {
+  font-family: 'Lato', serif;
+}
+#navigationMenu {
+  width: 100%;
+  height: 4.2vw;
+  box-shadow: 10px 2px 15px 5px rgba(0, 0, 0, 0.2);
+  float: right;
+  z-index: 1;
+  background-color: rgba(0,0,0,0.8);
+}
+#navigationMenu ul {
+  text-align: center;
+  height: 1.5vw;
+  list-style: none;
+  margin-right: 27%;
+  margin-top: 1.2vw;
+}
+#navigationMenu li {
+  position: relative;
+  display: inline-block;
+  margin-right: 5%;
+  height: 1.5vw;
+}
+#navigationMenu img {
+  float: left;
+  margin-left: 24%;
+  margin-right: 4%;
+  width: 4.5vw;
+}
+.navBtn a {
+  font-family: "Nothing You Could Do";
+  color: rgb(40,40,40);
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 50;
+}
+.navBtn span {
+  font-family: "Nothing You Could Do";
+  color: rgb(205,130,36);
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 50;
+  cursor: pointer;
+}
+.navBtn a:hover {
+  color: rgb(120,120,120);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.navBtn a:active {
+  color: rgb(80,80,80);
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4);
+  padding: 5px;
+  margin-right: -5px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#menuLinks {
+  position: relative;
+  width: 100vw;
+  height: 1.5vw;
+}
 
 .container {
-  width: 100%;
-  background-color: blue;
+  background-image: -webkit-linear-gradient(#051020, #17345c, #619bec);
+  background-image: linear-gradient(#051020, #17345c, #619bec);
 }

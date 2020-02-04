@@ -728,7 +728,7 @@ input[type="text"]:focus, textarea:focus {
   padding-right: 30.5vw;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 
   #container {
     height: 300vw;
@@ -739,7 +739,7 @@ input[type="text"]:focus, textarea:focus {
     left: 35vw;
   }
   #picAdrian img {
-    width: 500px;
+    width: 105vw;
     margin-bottom: -15vw;
     z-index: 1;
   }
@@ -758,10 +758,11 @@ input[type="text"]:focus, textarea:focus {
     color: rgb(199,124,30);
   }
   #header p span {
-    font-size: 23pt;
+    font-size: 7vw;
+    right: 0.5vw;
   }
   .fab {
-    font-size: 35px;
+    font-size: 7vw;
   }
   #icons {
     margin-top: -10vw;
@@ -777,15 +778,15 @@ input[type="text"]:focus, textarea:focus {
     margin-top: 3%;
   }
   .navBtn span {
-    font-size: 14px;
+    font-size: 2.5vw;
   }
   .navBtn a {
-    font-size: 14px;
+    font-size: 2.5vw;
   }
   #navigationMenu img {
     float: left;
     margin-left: 8%;
-    width: 50px;
+    width: 10vw;
   }
   #arrowLink_ {
     display: none;
@@ -893,7 +894,7 @@ input[type="text"]:focus, textarea:focus {
     font-size: 3vw;
   }
 }
-@media screen and (max-width: 800px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+@media screen and (max-width: 600px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 
     .one {
 
