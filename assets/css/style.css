@@ -1,0 +1,942 @@
+html {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+#container {
+  margin: 0;
+  height: 250vw;
+}
+
+/*/#################//
+  Navigation Menu
+//#################/*/
+
+#navigationMenu {
+  width: 100%;
+  height: 4.2vw;
+  box-shadow: 10px 2px 15px 5px rgba(0, 0, 0, 0.2);
+  float: right;
+  z-index: 100;
+}
+.stickyNav {
+  top: 0;
+  box-shadow: 10px 2px 15px 5px rgba(0, 0, 0, 0.6);
+  position: fixed;
+  position: -webkit-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.stickyNav .navBtn a {
+  color: rgba(255,255,255,0.8);
+}
+#navigationMenu ul {
+  text-align: center;
+  height: 1.5vw;
+  list-style: none;
+  margin-right: 27%;
+  margin-top: 1.2vw;
+}
+#navigationMenu li {
+  position: relative;
+  display: inline-block;
+  margin-right: 5%;
+  height: 1.5vw;
+}
+#navigationMenu img {
+  float: left;
+  margin-left: 24%;
+  margin-right: 4%;
+  width: 4.5vw;
+}
+.navBtn a {
+  font-family: "Nothing You Could Do";
+  color: rgb(40,40,40);
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 50;
+}
+.navBtn span {
+  font-family: "Nothing You Could Do";
+  color: rgb(205,130,36);
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 50;
+  cursor: pointer;
+}
+.navBtn a:hover {
+  color: rgb(120,120,120);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.navBtn a:active {
+  color: rgb(80,80,80);
+  box-shadow: inset 1px 1px 1px 1px rgba(0,0,0,0.4);
+  padding: 5px;
+  margin-right: -5px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#menuLinks {
+  position: relative;
+  width: 100vw;
+  height: 1.5vw;
+}
+
+/*/#################//
+  Welcome Window
+//#################/*/
+
+.loading {
+  box-shadow: 0 0 0 100vw white;
+  background-color: white;
+}
+.loading h1 {
+  visibility: hidden;
+}
+.doneLoad {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 100vw rgb(0, 0, 0);
+}
+.doneLoad h1 {
+  visibility: visible;
+}
+#flyInBox {
+  position: fixed;
+  padding-right: 30%;
+  padding-left: 30%;
+  height: 30vw;
+  width: 36%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  margin-left: 2%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 2%;
+  z-index: 101;
+}
+.welcome {
+  margin-top: 25%;
+  margin-bottom: 25%;
+  color: rgb(200, 200, 200);
+  font-size: 1.5vw;
+  z-index: 10;
+}
+.round {
+  background-color: rgb(210,210,210);
+  color: rgb(40,40,40);
+  border-color: rgb(90,90,90);
+  border-radius: 50%;
+}
+#flyInBox h1 {
+  border: 2px solid rgba(255,255,255,0.1);
+  padding: 0.5vw;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  z-index: 10;
+}
+#arrowLink_ {
+  width: 3%;
+  height: 6%;
+  background-image: url("images/arrowLink2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 2vw;
+  top: 85vh;
+  opacity: 0.6;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#arrowLink {
+  width: 6%;
+  height: 10%;
+  background-image: url("images/arrowLink.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  margin-top: 9%;
+  margin-left: 47%;
+  z-index: 50;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#arrowLink:hover {
+  width: 8%;
+  height: 12%;
+  margin-left: 46%;
+  margin-top: 8%;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+#arrowLink2 {
+  width: 6%;
+  height: 10%;
+  background-image: url("images/arrowLink3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  margin-top: -60%;
+  margin-left: 46%;
+  z-index: 50;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#arrowLink2:hover {
+  width: 8%;
+  height: 12%;
+  margin-left: 45%;
+  margin-top: -61%;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+/*/#################//
+  Header / Top Overlay
+//#################/*/
+
+#header {
+  position: relative;
+  -webkit-transform-style: inherit;
+  transform-style: inherit;
+  height: 115vw;
+  z-index: -2;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 30vw 0 5vw;
+  width: 100vw;
+  top: 0;
+}
+/*#header img {
+  Width: 100%;
+  Height: 100%;
+}*/
+#header p {
+  position: absolute;
+  bottom: 10%;
+  right: 22%;
+  color: white;
+  font-family: "Assistant";
+  font-size: 1.2vw;
+}
+#header, #header:before {
+  -webkit-background: 50% 50% / cover;
+  -moz-background: 50% 50% / cover;
+  -ms-background: 50% 50% / cover;
+  background: 50% 50% / cover;
+}
+#header::before {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  background-image: url("images/home-min.jpg");
+  background-size: cover;
+  -ms-transform-origin: center center 0;
+  -moz-transform-origin: center center 0;
+  -webkit-transform-origin: center center 0;
+  transform-origin: center center 0;
+
+  -webkit-min-height: 100vh;
+  -moz-min-height: 100vh;
+  -ms-min-height: 100vh;
+  min-height: 100vh;
+}
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm)  {
+
+  #header::before {
+    -webkit-transform: translateZ(-1px) scale(2);
+    -o-transform: translateZ(-1px) scale(2);
+    -ms-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .portfolio-item:hover {
+    width: 110%;
+    height: 110%;
+    margin-top: -1vw;
+    margin-left: -1vw;
+    box-shadow: 15px 15px 5px rgba(0,0,0,0.3);
+    z-index: 5;
+    background-blend-mode: initial;
+    text-shadow: 2px 2px black;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+  }
+  .wide:hover {
+    width: 311.5%;
+    height: 80%;
+    z-index: 5;
+  }
+
+  @-moz-document url-prefix() {
+    #header::before {
+      transform: translateZ(-1px) scale(1);
+    }
+    #arrowLink:hover {
+      width: 6%;
+      height: 10%;
+      margin-top: 9%;
+      margin-left: 47%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    #arrowLink2:hover {
+      width: 6%;
+      height: 10%;
+      margin-top: -60%;
+      margin-left: 46%;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+  }
+}
+#header p span {
+  position: relative;
+  font-family: "Nothing You Could Do";
+  font-size: 3vw;
+  right: 12%;
+  z-index: 1;
+}
+#aboutmeBox {
+  position: absolute;
+  width: 30vw;
+  height: 25vw;
+  margin: 5%;
+  margin-left: 8%;
+  padding: 2%;
+  bottom: -11%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: rgba(30, 34, 41, 0.7);
+  background-size: 70%;
+  float: left;
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.2);
+  border-radius: 5%;
+  z-index: 1;
+}
+#picAdrian {
+  float: right;
+  left: 50%;
+}
+#picAdrian img {
+  width: 170%;
+  margin-bottom: -15vw;
+}
+#aboutmeBox h2 {
+  font-family: "Antic Slab";
+  font-weight: 1;
+  color: rgb(205,130,36);
+  text-align: center;
+  font-size: 2vw;
+  margin-top: -0.5vw;
+}
+#a1 {
+  position: absolute;
+  bottom: 0;
+}
+#a2 {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+}
+#aboutmeBox p {
+  font-family: "Open Sans";
+  font-weight: 1;
+  color: rgb(140,140,140);
+  text-align: center;
+  font-size: 0.9vw;
+  line-height: 1.5;
+  left: 20%;
+  bottom: 5%;
+}
+.underlay {
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 30vw;
+  bottom: -2vw;
+}
+#scrollPsAbout {
+  position: absolute;
+  width: 100vw;
+  height: 50vw;
+  margin-top: 28%;
+  z-index: 102;
+}
+
+.fab {
+  color: black;
+  background-color: rgba(255,255,255,0.4);
+  font-family: 'FontAwesome' !important;
+  font-size: 2vw;
+  font-style: normal;
+  padding-left: 0.2vw;
+  padding-right: 0.2vw;
+  border-radius: 20%;
+}
+.icon {
+  padding: 2vw;
+}
+.fab:hover {
+  color: rgb(80,80,80);
+  background-color: rgba(255,255,255,0.8);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#icons {
+  margin-top: -5vw;
+  padding-bottom: 2vw;
+  margin-left: 78vw;
+}
+
+/*/###############//
+  Bottom Content
+//################/*/
+
+#bottom-content {
+  position: relative;
+}
+#bottom-content img {
+  width: 100%;
+  height: 100%;
+  margin-top: 1vw;
+}
+
+/*/##################//
+  Portfolio Preview
+//##################/*/
+#portfolio-title {
+  position: absolute;
+  padding-top: 4vw;
+  margin-top: -124vw;
+  margin-left: 35%;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 3vw;
+  z-index: 4;
+}
+#portfolio-title a {
+  position: absolute;
+  font-size: 1.2vw;
+  text-decoration: none;
+  font-family: 'Open Sans';
+  color: rgb(205,130,36);
+  margin-top: -0.5vw;
+  margin-left: 25.4vw;
+}
+#portfolio-title a:hover {
+  color: rgb(135,60,0);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+#portfolio-grid p {
+  color: rgb(199,124,30);
+  font-size: 0.9em;
+  position: absolute;
+  margin-top: 7vw;
+}
+#portfolio-grid {
+  position: absolute;
+  padding: 10vw;
+  height: 35%;
+  width: 65%;
+  display: -ms-grid;
+  display: grid;
+  margin-top: -125vw;
+  margin-left: 7%;
+  -ms-grid-rows: (1fr)[3];
+  grid-template-rows: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2px;
+  font-family: 'Questrial', sans-serif;
+  font-weight: lighter;
+}
+#portfolio-grid a {
+  text-decoration: none;
+  z-index: 4;
+}
+#portfolio-grid a:hover {
+  z-index: 5;
+}
+#portfolio-grid a:hover p {
+  opacity: 0;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.portfolio-item {
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  font-size: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  z-index: 4;
+}
+.one {
+  background-image: url("images/WhispSecLOAD_SCREEN.png");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+.two {
+  background-image: url("images/GameMainMenu.png");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+.three {
+  background: rgba(0,0,0,0.6);
+  background-image: url("images/BlenderAnimation.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+.four {
+  background: rgba(0,0,0,0.7);
+  background-image: url("images/Arduino.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+.five {
+  background: rgba(0,0,0,0.5);
+  background-image: url("images/Infin8liteLOGO.png");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: left;
+  z-index: 5;
+}
+.six {
+  z-index: 5;
+}
+.wide {
+  width: 301.5%;
+  height: 70%;
+  z-index: 5;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+  .one {
+
+  }
+  .two {
+    margin-top: -81.5%;
+    margin-left: 101%;
+  }
+  .three {
+    margin-top: -81.5%;
+    margin-left: 202%;
+  }
+  .four {
+    margin-top: 1%;
+  }
+  .five {
+    margin-top: -81.5%;
+    margin-left: 101%;
+  }
+  .six {
+    margin-top: -81.5%;
+    margin-left: 202%;
+  }
+  .wide {
+    margin-top: 1%;
+  }
+  .portfolio-item:hover {
+
+  }
+  #name, #email, #phone {
+    padding: 1vw;
+    margin: 0;
+  }
+}
+
+/*/#############/*/
+/* Contact Form */
+/*/############/*/
+
+#Contact {
+  position: absolute;
+  background-image: -webkit-linear-gradient(top left, black, #a9c2ce, grey);
+  background-image: linear-gradient(to bottom right, black, #a9c2ce, grey);
+  height: 60vw;
+  width: 100vw;
+  margin-top: -40vw;
+}
+#contactTitle {
+  margin-left: 34.5%;
+  margin-top: 14vw;
+  position: absolute;
+  text-align: center;
+  width: 29.5vw;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 3vw;
+  color: white;
+}
+#Contact-Form {
+ margin-left: 22.5%;
+ padding-top: 6vw;
+ padding-bottom: 1vw;
+ text-align: center;
+ margin-top: 10%;
+ width: 55vw;
+ height: 37vw;
+ background-color: rgba(0,0,0,0.4);
+ border-color: rgba(255,255,255,0.4);
+ border-style: dashed;
+ border-width: thin;
+}
+#sendBtn {
+  width: 40vw;
+  height: 3vw;
+  margin: 1vw;
+  border: 0.0234vw solid white;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  color: white;
+  background-color: rgba(0,0,0,0.6);
+}
+#sendBtn:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.3);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#name, #email, #phone {
+  width: 40vw;
+  height: 1.7vw;
+  border: 0.117vw solid black;
+  border-radius: 0.85vw;
+  outline: none;
+  padding: 1.17vw;
+  margin: 0.6vw;
+  box-sizing: border-box;
+  background-color: rgb(255,255,255);
+  font-family: 'Thasadith', sans-serif;
+  font-size: 1vw;
+  font-weight: bold;
+  color: black;
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #name, #email, #phone {
+    height: 2.5vw;
+    padding: 0.7vw;
+  }
+}
+#message {
+  width: 40vw;
+  height: 10vw;
+  margin: 0.6vw;
+  resize: none;
+  border: 0.117vw solid black;
+  border-radius: 0.85vw;
+  outline: none;
+  padding: 1.17vw;
+  box-sizing: border-box;
+  background-color: rgb(255,255,255);
+  font-family: 'Thasadith', sans-serif;
+  font-size: 1vw;
+  overflow: auto;
+  font-weight: bold;
+  color: black;
+}
+#message::-webkit-scrollbar {
+    width: 2%;
+}
+
+#message::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 40%;
+}
+
+#message::-webkit-scrollbar-thumb {
+    border-radius: 40%;;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+#name {
+  margin-top: 6vw;
+}
+input[type="text"]:focus, textarea:focus {
+  border-color: #6F97F3;
+  box-shadow: 0 0 1.17vw 0 #6F97F3;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#formInfo {
+  color: red;
+  margin-left: 2.5vw;
+  font-size: 1.3vw;
+  margin-top: 1vw;
+  width: 50vw;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+#infoFooter {
+  position: inherit;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  color: white;
+  font-size: 1.17vw;
+  bottom: -1.2vw;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+  padding: 1vw;
+  padding-left: 30.5vw;
+  padding-right: 30.5vw;
+}
+
+@media screen and (max-width: 600px) {
+
+  #container {
+    height: 300vw;
+  }
+  #picAdrian {
+    position: absolute;
+    float: right;
+    left: 35vw;
+  }
+  #picAdrian img {
+    width: 105vw;
+    margin-bottom: -15vw;
+    z-index: 1;
+  }
+  #aboutmeBox {
+    width: 300px;
+    height: 400px;
+  }
+  #aboutmeBox p {
+    font-size: 12px;
+    color: rgb(190,190,190);
+    text-align: left;
+    margin-left: -50px;
+  }
+  #aboutmeBox h2 {
+    font-size: 20px;
+    color: rgb(199,124,30);
+  }
+  #header p span {
+    font-size: 7vw;
+    right: 0.5vw;
+  }
+  .fab {
+    font-size: 7vw;
+  }
+  #icons {
+    margin-top: -10vw;
+    padding-bottom: 2vw;
+    margin-left: 62vw;
+  }
+  #navigationMenu {
+    height: 55px;
+  }
+  #navigationMenu ul {
+    width: 90%;
+    margin-right: 20%;
+    margin-top: 3%;
+  }
+  .navBtn span {
+    font-size: 2.5vw;
+  }
+  .navBtn a {
+    font-size: 2.5vw;
+  }
+  #navigationMenu img {
+    float: left;
+    margin-left: 8%;
+    width: 10vw;
+  }
+  #arrowLink_ {
+    display: none;
+  }
+  #arrowLink {
+    display: none;
+  }
+  #arrowLink2 {
+    display: none;
+  }
+  .welcome {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  #flyInBox h1 {
+    padding: 15px;
+  }
+  #scrollPsAbout {
+    margin-top: -40vw;
+  }
+  #bottom-content {
+    margin-top: 1.5vw;
+  }
+  #portfolio-grid {
+    height: 160vw;
+    width: 90vw;
+    padding: 0;
+    margin-top: -160vw;
+    margin-left: 5%;
+    -ms-grid-rows: (1fr)[4];
+    grid-template-rows: repeat(4, 1fr);
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #portfolio-grid p {
+    font-size: 2vw;
+  }
+  .portfolio-item {
+    font-size: 2.5vw;
+  }
+  .wide {
+    width: 201.5%;
+    height: 70%;
+    z-index: 5;
+  }
+  #portfolio-title {
+    margin-top: -180vw;
+    margin-left: 20vw;
+    font-size: 6vw;
+  }
+  #portfolio-title a {
+    font-size: 3.5vw;
+    margin-left: 47vw;
+  }
+  .wide:hover {
+    width: 211.5%;
+  }
+  #Contact {
+    height: 105vw;
+    width: 100vw;
+    margin-top: -1vw;
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  #bottom-content {
+    height: 180vw;
+    background-color: white;
+  }
+  #bottom-content img {
+    height: 60%;
+    margin-top: 73vw;
+  }
+  #Contact-Form {
+   width: 90vw;
+   height: 70vw;
+   margin-left: 5vw;
+   padding-top: 12vw;
+  }
+  #name, #email, #phone {
+    height: 6vw;
+    width: 90%;
+    margin: 2vw;
+    font-size: 2vw;
+  }
+  #message {
+    height: 20vw;
+    width: 90%;
+    margin: 2vw;
+    font-size: 2.1vw;
+  }
+  #sendBtn {
+    width: 81vw;
+    height: 6vw;
+  }
+  #infoFooter {
+    font-size: 3vw;
+    padding-left: 0;
+    padding-right: 0;
+    bottom: -3vw;
+  }
+  #formInfo {
+    margin-left: 20vw;
+    font-size: 3vw;
+  }
+}
+@media screen and (max-width: 600px) and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+    .one {
+
+    }
+    .two {
+      margin-top: -89%;
+      margin-left: 101%;
+    }
+    .three {
+      margin-top: 1%;
+      margin-left: 0;
+    }
+    .four {
+      margin-top: -89%;
+      margin-left: 101%;
+    }
+    .five {
+      margin-top: 1%;
+      margin-left: 0;
+    }
+    .six {
+      margin-top: -89%;
+      margin-left: 101%;
+    }
+    .wide {
+      margin-top: 1%;
+    }
+    .portfolio-item:hover {
+
+    }
+    .wide:hover {
+      width: 201.5%;
+    }
+    #flyInBox {
+      padding: 0;
+      width: 100%;
+    }
+    .welcome {
+      margin-left: -4vw;
+      padding: 2.7vw
+    }
+    .welcome {
+      font-size: 2vw;
+    }
+  }
