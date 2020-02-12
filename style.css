@@ -338,7 +338,7 @@ body::-webkit-scrollbar {
 #aboutmeBox {
   position: absolute;
   width: 30vw;
-  height: 25vw;
+  height: 28vw;
   margin: 5%;
   margin-left: 8%;
   padding: 2%;
@@ -547,7 +547,7 @@ body::-webkit-scrollbar {
 }
 .five {
   background: rgba(0,0,0,0.5);
-  background-image: url("images/Infin8liteLOGO.png");
+  background-image: url("images/Infin8liteLOGO.PNG");
   background-blend-mode: multiply;
   background-size: cover;
   background-position: left;
@@ -563,6 +563,10 @@ body::-webkit-scrollbar {
 .wide {
   width: 301.5%;
   height: 70%;
+  background-image: url("images/studio.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: bottom;
   z-index: 5;
 }
 
