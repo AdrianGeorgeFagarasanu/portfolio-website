@@ -24,11 +24,14 @@
   font-family: 'Lato';
   font-weight: 100;
 }
-.second .sld-title {
-  color: black;
-  margin-top: 41vw;
-  font-weight: 400;
+.third .sld-title {
+  margin-top: 43%;
 }
 .web-proto {
   width: 60%;
+}
+#music iframe {
+  position: absolute;
+  margin-left: -31.2vw;
+  margin-top: 40%;
 }
